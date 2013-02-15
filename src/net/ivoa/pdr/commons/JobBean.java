@@ -26,7 +26,7 @@ public class JobBean {
 	public Map<String, String> getJobConfiguration() {
 		return jobConfiguration;
 	}
-	public List<String> getJobResults() {
+	public Map<String,String> getJobResults() {
 		return jobResults;
 	}
 	public List<String> getJobErrors() {
@@ -63,7 +63,7 @@ public class JobBean {
 	public void setJobConfiguration(Map<String, String> jobConfiguration) {
 		this.jobConfiguration = jobConfiguration;
 	}
-	public void setJobResults(List<String> jobResults) {
+	public void setJobResults(Map<String,String> jobResults) {
 		this.jobResults = jobResults;
 	}
 	public void setJobErrors(List<String> jobErrors) {
@@ -98,7 +98,7 @@ public class JobBean {
 	private Map<Integer,String> userToNotify;
 	private List<List<String>> userAskedThisJob;
 	private Map<String,String> jobConfiguration;
-	private List<String> jobResults;
+	private Map<String,String> jobResults;
 	private List<String> jobErrors;
 	private boolean jobProcessed;
 	private boolean jobfinished;

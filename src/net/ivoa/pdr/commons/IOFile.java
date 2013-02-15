@@ -7,17 +7,23 @@ package net.ivoa.pdr.commons;
  */
 
 public class IOFile {
+	public String getResultName() {
+		return resultName;
+	}
+	public void setResultName(String resultName) {
+		this.resultName = resultName;
+	}
 	public IOFile(String filePattern, String fikeExtension, String fileDirectory) {
 		super();
 		this.filePattern = filePattern;
-		this.fikeExtension = fikeExtension;
+		this.fileExtension = fikeExtension;
 		this.fileDirectory = fileDirectory;
 	}
 	public String getFilePattern() {
 		return filePattern;
 	}
-	public String getFikeExtension() {
-		return fikeExtension;
+	public String getFileExtension() {
+		return fileExtension;
 	}
 	public String getFileDirectory() {
 		return fileDirectory;
@@ -25,13 +31,14 @@ public class IOFile {
 	public void setFilePattern(String filePattern) {
 		this.filePattern = filePattern;
 	}
-	public void setFikeExtension(String fikeExtension) {
-		this.fikeExtension = fikeExtension;
+	public void setFileExtension(String fikeExtension) {
+		this.fileExtension = fikeExtension;
 	}
 	public void setFileDirectory(String fileDirectory) {
 		this.fileDirectory = fileDirectory;
 	}
 	private String filePattern;
-	private String fikeExtension;
+	private String fileExtension;
 	private String fileDirectory;
+	private String resultName;
 }
