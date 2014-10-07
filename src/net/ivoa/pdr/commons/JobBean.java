@@ -1,5 +1,6 @@
 package net.ivoa.pdr.commons;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -9,7 +10,7 @@ import java.util.Map;
  * LERMA
  */
 
-public class JobBean {
+public class JobBean implements Serializable{
 
 
 
@@ -93,6 +94,18 @@ public class JobBean {
 	public List<List<String>> getUserAskedThisJob() {
 		return userAskedThisJob;
 	}
+	public String getErrors() {
+		return errors;
+	}
+	public void setErrors(String errors) {
+		this.errors = errors;
+	}
+	public String getPhase() {
+		return phase;
+	}
+	public void setPhase(String phase) {
+		this.phase = phase;
+	}
 	private Integer IdJob;
 	private Integer IdService;
 	private Map<Integer,String> userToNotify;
@@ -106,5 +119,7 @@ public class JobBean {
 	private String demandDate;
 	private String processingDate;
 	private String finishingDate;
+	private String errors;
+	private String phase;
 	
 }
